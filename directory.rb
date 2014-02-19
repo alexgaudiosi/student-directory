@@ -1,33 +1,33 @@
 # let's put all students into an array
 students = [
-["Mario Gintili", :february],
-["Mikhail Dubov", :february],
-["Karolis Noreika", :february],
-["Michael Sidon", :february],
-["Charles De Barros", :february],
-["Ruslan Vikhor", :february],
-["Toby Retallick", :february],
-["Mark Mekhaiel", :february],
-["Sarah Young", :february],
-["Hannah Wight", :february],
-["Khushkaran Singh", :february],
-["Rick Brunstedt", :february],
-["Manjit Singh", :february],
-["Alex Gaudiosi", :february],
-["Ross Hepburn", :february],
-["Natascia Marchese", :february],
-["Tiffanie Chia", :february],
-["Matthew Thomas", :february],
-["Freddy McGroarty", :february],
-["Tyler Rollins", :february],
-["Richard Curteis", :february],
-["Anna Yanova", :february],
-["Andrew Cumine", :february]
+{:name => "Mario Gintili", :cohort => :february},
+{:name => "Mikhail Dubov", :cohort => :february},
+{:name => "Karolis Noreika", :cohort => :february},
+{:name => "Michael Sidon", :cohort => :february},
+{:name => "Charles De Barros", :cohort => :february},
+{:name => "Ruslan Vikhor", :cohort => :february},
+{:name => "Toby Retallick", :cohort => :february},
+{:name => "Mark Mekhaiel", :cohort => :february},
+{:name => "Sarah Young", :cohort => :february},
+{:name => "Hannah Wight", :cohort => :february},
+{:name => "Khushkaran Singh", :cohort => :february},
+{:name => "Rick Brunstedt", :cohort => :february},
+{:name => "Manjit Singh", :cohort => :february},
+{:name => "Alex Gaudiosi", :cohort => :february},
+{:name => "Ross Hepburn", :cohort => :february},
+{:name => "Natascia Marchese", :cohort => :february},
+{:name => "Tiffanie Chia", :cohort => :february},
+{:name => "Matthew Thomas", :cohort => :february},
+{:name => "Freddy McGroarty", :cohort => :february},
+{:name => "Tyler Rollins", :cohort => :february},
+{:name => "Richard Curteis", :cohort => :february},
+{:name => "Anna Yanova", :cohort => :february},
+{:name => "Andrew Cumine", :cohort => :february}
 ]
 
 def print(students)
 	students.each do |student|
-		puts "#{student[0]} (#{student[1]} cohort)"
+		puts "#{student[:name]} (#{student[:cohort]} cohort) " 
 	end
 end
 
