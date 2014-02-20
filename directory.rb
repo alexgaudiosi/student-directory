@@ -4,20 +4,45 @@ def print_header
 end
 
 def input_students
-	print "Please enter the names of the students\n"
-	print "To finish, just hit return twice\n"
-	# create an empty array
-	students = []
-	# get the first name
+  
+  students = []
+  # create an empty array
+
+	print "Please enter a name of a student\n"
+	# get the name
 	name = gets.chomp
+  print "Where were you born?\n"
+  # place of birth
+  born = gets.chomp
+  print "What hobbies do you have?\n"
+  # Hobbies
+  hobbies = gets.chomp
 	# while the name is not empty, repeat this code
+
+
 	while !name.empty? do
-		# add the student hash to the array
-		students << {:name => name, :cohort => :february}
-		print "Now we have #{students.length} students, please enter another\n"
-		# get another name from the user
-		name = gets.chomp
+	# add the student hash to the array
+	   students << {:name => name, :cohort => :february, :born => born, :hobbies => hobbies}
+	   print "Now we have #{students.length} students, any more to add?\n"
+	   # get another name from the user
+       print "Add another student?\n"
+      continue = gets.chomp.downcase
+      if continue == "yes"
+	       print "Please enter a name of a student\n"
+        # get the name
+          name = gets.chomp
+          print "Where were you born?\n"
+      # place of birth
+          born = gets.chomp
+          print "What hobbies do you have?\n"
+      # Hobbies
+          hobbies = gets.chomp
+        else
+          break
+    end
+
 	end
+
 	# return the array of students
 	students
 end
@@ -25,7 +50,7 @@ end
 def display(students)
   n = 0 
   while n < students.length
-    print "#{students[n][:name]} (#{students[n][:cohort]} cohort) \n"
+    print "#{students[n][:name]} (#{students[n][:cohort]} cohort) is from #{students[n][:born]} and enjoys #{students[n][:hobbies]}. \n"
     n += 1
   end
 end
