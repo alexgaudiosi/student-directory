@@ -50,7 +50,7 @@ end
 def display(students)
   n = 0 
   while n < students.length
-    print "#{students[n][:name]} (#{students[n][:cohort]} cohort) is from #{students[n][:born]} and enjoys #{students[n][:hobbies]}. \n"
+    print "#{students[n][:name]} (#{students[n][:cohort]} cohort) is from #{students[n][:born]} and enjoys #{students[n][:hobbies]}. \n".center(80)
     n += 1
   end
 end
