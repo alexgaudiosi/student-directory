@@ -11,6 +11,8 @@ def input_students
 	print "Please enter a name of a student\n"
 	# get the name
 	name = gets.chomp
+  print "What cohort are you in?\n"
+  cohort = gets.chomp
   print "Where were you born?\n"
   # place of birth
   born = gets.chomp
@@ -19,10 +21,15 @@ def input_students
   hobbies = gets.chomp
 	# while the name is not empty, repeat this code
 
+    name = "no first name given" if name.empty?
+    cohort = "no cohort given" if cohort.empty?
+    born = "no place of birth given" if born.empty?
+    hobbies = "hobbies not given" if hobbies.empty?
+
 
 	while !name.empty? do
 	# add the student hash to the array
-	   students << {:name => name, :cohort => :february, :born => born, :hobbies => hobbies}
+	   students << {:name => name, :cohort => cohort, :born => born, :hobbies => hobbies}
 	   print "Now we have #{students.length} students, any more to add?\n"
 	   # get another name from the user
        print "Add another student?\n"
@@ -31,12 +38,19 @@ def input_students
 	       print "Please enter a name of a student\n"
         # get the name
           name = gets.chomp
+          print "What cohort are you in?\n"
+          cohort = gets.chomp
           print "Where were you born?\n"
       # place of birth
           born = gets.chomp
           print "What hobbies do you have?\n"
       # Hobbies
           hobbies = gets.chomp
+
+              name = "no first name given" if name.empty?
+              cohort = "no cohort given" if cohort.empty?
+              born = "no place of birth given" if born.empty?
+              hobbies = "hobbies not given" if hobbies.empty?
         else
           break
     end
@@ -50,7 +64,7 @@ end
 def display(students)
   n = 0 
   while n < students.length
-    print "#{students[n][:name]} (#{students[n][:cohort]} cohort) is from #{students[n][:born]} and enjoys #{students[n][:hobbies]}. \n".center(80)
+    print "#{students[n][:name]} (#{students[n][:cohort]} cohort) is from #{students[n][:born]} and enjoys #{students[n][:hobbies]}. \n".center(180)
     n += 1
   end
 end
