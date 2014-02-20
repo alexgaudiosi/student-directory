@@ -46,7 +46,7 @@ def input_students
           print "What hobbies do you have?\n"
       # Hobbies
           hobbies = gets.chomp
-
+              #no response given
               name = "no first name given" if name.empty?
               cohort = "no cohort given" if cohort.empty?
               born = "no place of birth given" if born.empty?
@@ -72,7 +72,10 @@ end
 
 
 def print_footer(names)
+  if names.length > 1
 	print "Overall, we have #{names.length} great students\n".center(80)
+else  print "Overall, we have #{names.length} great student\n".center(80)
+end
 end
 
 #nothing happens until we call the method
