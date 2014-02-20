@@ -23,9 +23,11 @@ def input_students
 end
 
 def display(students)
-	students.each_with_index do |student, index|
-		print "#{index + 1}. #{student[:name]} (#{student[:cohort]} cohort) \n" 
-	end
+  n = 0 
+  while n < students.length
+    print "#{students[n][:name]} (#{students[n][:cohort]} cohort) \n"
+    n += 1
+  end
 end
 
 
