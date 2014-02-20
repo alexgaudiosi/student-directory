@@ -34,7 +34,7 @@ def print_footer(names)
 	print "Overall, we have #{names.length} great students\n"
 end
 
-#nothing happens until we call the methods
+#nothing happens until we call the method
 students = input_students
 print_header
 display(students)
