@@ -10,15 +10,15 @@ def input_students
 
 	print "Please enter a name of a student\n"
 	# get the name
-	name = gets.chomp
+	name = gets.chop
   print "What cohort are you in?\n"
-  cohort = gets.chomp
+  cohort = gets.chop
   print "Where were you born?\n"
   # place of birth
-  born = gets.chomp
+  born = gets.chop
   print "What hobbies do you have?\n"
   # Hobbies
-  hobbies = gets.chomp
+  hobbies = gets.chop
 	# while the name is not empty, repeat this code
 
     name = "no first name given" if name.empty?
@@ -30,22 +30,30 @@ def input_students
 	while !name.empty? do
 	# add the student hash to the array
 	   students << {:name => name, :cohort => cohort, :born => born, :hobbies => hobbies}
+    
+
+     if students.length > 1
 	   print "Now we have #{students.length} students, any more to add?\n"
+   else
+     print "Now we have #{students.length} student, any more to add?\n"
+   end
+
+
 	   # get another name from the user
        print "Add another student?\n"
-      continue = gets.chomp.downcase
+      continue = gets.chop.downcase
       if continue == "yes"
 	       print "Please enter a name of a student\n"
         # get the name
-          name = gets.chomp
+          name = gets.chop
           print "What cohort are you in?\n"
-          cohort = gets.chomp
+          cohort = gets.chop
           print "Where were you born?\n"
       # place of birth
-          born = gets.chomp
+          born = gets.chop
           print "What hobbies do you have?\n"
       # Hobbies
-          hobbies = gets.chomp
+          hobbies = gets.chop
               #no response given
               name = "no first name given" if name.empty?
               cohort = "no cohort given" if cohort.empty?
